@@ -23,8 +23,7 @@
         background-color: #020203;
         color: #f4f4f5;
         font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-        user-select: none;
-        overflow: hidden;
+        overflow: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         background-image:
@@ -213,9 +212,12 @@
 
 /* Animations */
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -242,6 +244,7 @@
     from {
         transform: translateY(-200%);
     }
+
     to {
         transform: translateY(200vh);
     }

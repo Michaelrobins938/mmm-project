@@ -30,7 +30,7 @@ export default function MMMDashboard() {
     const [sidebarOpen, setSidebarOpen] = useState(true);
 
     return (
-        <div className="flex h-screen w-screen overflow-hidden bg-[#020203] font-mono selection:bg-red-600/30 text-zinc-100">
+        <div className="flex min-h-screen w-screen overflow-auto bg-[#020203] font-mono selection:bg-red-600/30 text-zinc-100">
             {/* Ambient Background Grid */}
             <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-0"
                 style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}
@@ -76,8 +76,8 @@ export default function MMMDashboard() {
                                 key={view.id}
                                 onClick={() => setActiveView(view.id)}
                                 className={`w-full flex items-center gap-4 px-5 py-4 text-left transition-all relative overflow-hidden group rounded-sm ${isActive
-                                        ? 'bg-red-600/10 border-l-4 border-l-red-600 text-white shadow-[inset_10px_0_20px_rgba(229,9,20,0.05)]'
-                                        : 'text-zinc-600 hover:text-zinc-200 hover:bg-white/5'
+                                    ? 'bg-red-600/10 border-l-4 border-l-red-600 text-white shadow-[inset_10px_0_20px_rgba(229,9,20,0.05)]'
+                                    : 'text-zinc-600 hover:text-zinc-200 hover:bg-white/5'
                                     }`}
                             >
                                 <Icon size={20} className={`${isActive ? 'text-red-500' : 'text-zinc-600 group-hover:text-zinc-300'} transition-colors flex-shrink-0`} />
